@@ -17,5 +17,14 @@ puts "Creating freebies..."
 # * and a freebie belongs to a company.                         *
 # ***************************************************************
 # Create freebies Here
-
+# Freebie.create(item_name: "Icon", value: 5, dev_id: 1, company_id: 1)
+# Freebie.create(item_name: "Video", value: 15, dev_id: 2, company_id: 2)
+50.times do
+  Freebie.create(
+    item_name: Faker::Hacker.abbreviation,
+    value: rand(0..20),
+    dev_id: rand(1..4),
+    company_id: rand(1..4)
+  )
+end
 puts "Seeding done!"
